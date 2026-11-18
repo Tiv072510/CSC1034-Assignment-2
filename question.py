@@ -1,19 +1,24 @@
 class Question:
     def __init__(self, text, options, answers, marks_per_answer, topic,
     last_attempt):
-        pass
+        self.text = text
+        self.options = options
+        self.answers = answers
+        self.marks_per_answer = marks_per_answer
+        self.topic = topic
+        self.last_attempt = last_attempt
     def get_text(self):
-        pass
+        return self.text
     def get_options(self):
-        pass
+        return self.options
     def get_answers(self):
-        pass
+        return self.answers
     def get_marks_per_answer(self):
-        pass
+        return self.marks_per_answer
     def get_topic(self):
-        pass
+        return self.topic
     def get_last_attempt(self):
-        pass
+        return self.last_attempt
     def __str__(self):
         pass
     def __repr__(self):
