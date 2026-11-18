@@ -20,12 +20,14 @@ class Question:
     def get_last_attempt(self):
         return self.last_attempt
     def __str__(self):
-        pass
+        return f"Question(text={self.text}, options={self.options}, answers={self.answers}, marks_per_answer={self.marks_per_answer}, topic={self.topic}, last_attempt={self.last_attempt})"
     def __repr__(self):
-        pass
+        return f"Question(text={self.text}, options={self.options}, answers={self.answers}, marks_per_answer={self.marks_per_answer}, topic={self.topic}, last_attempt={self.last_attempt})"
     def __eq__(self, other):
-        pass
+        if isinstance(other, Question):
+            return self.text == other.text
+        return None
     def __hash__(self):
-        pass
+        return hash(self.text)
     def get_total_marks(self):
-        pass
+        return self.marks_per_answer * len(self.answers)
